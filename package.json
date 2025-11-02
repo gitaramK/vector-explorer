@@ -2,7 +2,7 @@
   "name": "vector-explorer",
   "displayName": "Vector Explorer",
   "description": "Inspect and visualize FAISS and Chroma vector databases with chunk mappings",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "publisher": "gitaramkanawade",
   "repository": {
     "type": "git",

@@ -138,10 +138,16 @@ chroma_db/
 
 #### Table Columns
 - **ID**: Unique identifier for each vector
-- **Text Chunk**: Truncated text preview (click to see full text)
-- **Vector**: First 5 dimensions (click to see full vector)
+- **Text Chunk**: Truncated text preview (click to view full text in modal)
+- **Vector**: First 5 dimensions (click to view full vector in modal)
 - **Source**: Origin file or document
-- **Actions**: Copy text or vector buttons
+
+#### Action Icons (Side Panel)
+Each row has action icons on the left side that appear on hover:
+- **📄 View Text**: Opens a modal with the complete text content
+- **🔢 View Vector**: Opens a modal showing the full vector embedding
+- **📋 Copy Text**: Copies the text content to clipboard
+- **📊 Copy Vector**: Copies the vector data to clipboard
 
 #### Features
 - **Sorting**: Click column headers to sort
@@ -401,7 +407,14 @@ If you find this extension helpful, please consider:
 - 🔗 Sharing it with colleagues
 
 ---
+## 📧 Contact
 
-**Made with ❤️ for the AI/ML community**
+**Email**: [gitaramkanawade@gmail.com](mailto:gitaramkanawade@gmail.com)
+
+For technical support, feature requests, or general inquiries about Vector Explorer.
+
+
+
+**Made with ❤️ for the AI/Gen-AI community**
 
 *Happy Vector Exploring! 🚀*
