@@ -1,0 +1,40 @@
+{
+  "chunks": [
+    {
+      "id": "chunk_0000",
+      "text": "Machine Learning Fundamentals\n\nMachine learning is a subset of artificial intelligence that enables systems to learn and improve from experience without being explicitly programmed. It focuses on developing computer programs that can access data and use it to learn for themselves. The process of learning begins with observations or data, such as examples, direct experience, or instruction, in order to look for patterns in data and make better decisions in the future based on the examples that we provide.",
+      "source": "test_doc.txt",
+      "metadata": {
+        "chunk_index": 0
+      }
+    },
+    {
+      "id": "chunk_0001",
+      "text": "Types of Machine Learning\n\nThere are three main types of machine learning: supervised learning, unsupervised learning, and reinforcement learning. Supervised learning uses labeled data to train algorithms. Unsupervised learning works with unlabeled data to find hidden patterns.",
+      "source": "test_doc.txt",
+      "metadata": {
+        "chunk_index": 1
+      }
+    },
+    {
+      "id": "chunk_0002",
+      "text": "Reinforcement learning uses rewards and punishments to guide the learning process. Applications\n\nMachine learning has numerous applications across various industries. In healthcare, it helps in disease diagnosis and drug discovery.",
+      "source": "test_doc.txt",
+      "metadata": {
+        "chunk_index": 2
+      }
+    },
+    {
+      "id": "chunk_0003",
+      "text": "In finance, it's used for fraud detection and algorithmic trading. In transportation, it powers autonomous vehicles and traffic prediction systems..",
+      "source": "test_doc.txt",
+      "metadata": {
+        "chunk_index": 3
+      }
+    }
+  ],
+  "total": 4,
+  "dimension": 384,
+  "index_type": "flat",
+  "created_at": "2025-11-02T00:06:17.963269"
+}

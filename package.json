@@ -1,0 +1,117 @@
+{
+  "name": "vector-explorer",
+  "displayName": "Vector Explorer",
+  "description": "Inspect and visualize FAISS and Chroma vector databases with chunk mappings",
+  "version": "1.0.1",
+  "publisher": "gitaramkanawade",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gitaramK/vector-explorer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gitaramK/vector-explorer/issues"
+  },
+  "homepage": "https://github.com/gitaramK/vector-explorer#readme",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Data Science",
+    "Visualization",
+    "AI",
+    "Other"
+  ],
+  "keywords": [
+    "vector database",
+    "embeddings",
+    "faiss",
+    "chroma",
+    "ai",
+    "machine learning"
+  ],
+  "activationEvents": [
+    "onView:vectorExplorerSidebar"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "vector-explorer",
+          "title": "Vector Explorer",
+          "icon": "$(database)"
+        }
+      ]
+    },
+    "views": {
+      "vector-explorer": [
+        {
+          "id": "vectorExplorerSidebar",
+          "name": "Vector Explorer",
+          "type": "webview"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "vectorExplorer.openVectorDB",
+        "title": "Open Vector Database",
+        "category": "Vector Explorer",
+        "icon": "$(folder-opened)"
+      },
+      {
+        "command": "vectorExplorer.exportCSV",
+        "title": "Export as CSV",
+        "category": "Vector Explorer",
+        "icon": "$(export)"
+      },
+      {
+        "command": "vectorExplorer.refresh",
+        "title": "Refresh",
+        "category": "Vector Explorer",
+        "icon": "$(refresh)"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "vectorExplorer.openVectorDB",
+          "when": "explorerResourceIsFolder || resourceExtname == .faiss",
+          "group": "navigation"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run package",
+    "compile": "webpack",
+    "watch": "webpack --watch",
+    "package": "webpack --mode production --devtool hidden-source-map",
+    "compile-tests": "tsc -p . --outDir out",
+    "watch-tests": "tsc -p . -w --outDir out",
+    "pretest": "npm run compile-tests && npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js",
+    "dev": "webpack --mode development --watch"
+  },
+  "devDependencies": {
+    "@types/glob": "^8.1.0",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "20.x",
+    "@types/vscode": "^1.85.0",
+    "@typescript-eslint/eslint-plugin": "^6.4.1",
+    "@typescript-eslint/parser": "^6.4.1",
+    "@vscode/test-electron": "^2.3.4",
+    "eslint": "^8.47.0",
+    "glob": "^10.3.3",
+    "mocha": "^10.2.0",
+    "ts-loader": "^9.4.4",
+    "typescript": "^5.1.6",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "csv-stringify": "^6.4.6",
+    "vsce": "^2.15.0"
+  }
+}

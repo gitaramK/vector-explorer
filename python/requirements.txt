@@ -1,0 +1,12 @@
+# Python dependencies for Vector Explorer
+
+# Core dependencies (required)
+faiss-cpu>=1.7.4
+chromadb>=0.4.0
+numpy>=1.24.0
+
+# Optional dependencies for create_metadata.py utility
+sentence-transformers>=2.2.0  # HuggingFace embeddings
+openai>=1.0.0  # OpenAI embeddings (optional)
+torch>=2.0.0  # Required by sentence-transformers
+
