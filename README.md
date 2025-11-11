@@ -360,6 +360,7 @@ pip3 install faiss-cpu chromadb numpy
 ## 🗺️ Planned Features
 
 Future updates may include:
+- **Copilot Agent Integration**: Build a Copilot agent that analyzes your vector DB content
 - Support for additional vector databases (Pinecone, Milvus, Weaviate)
 - Vector similarity search capabilities
 - 2D/3D visualization with t-SNE or UMAP

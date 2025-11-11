@@ -69,7 +69,7 @@ def load_chroma_vectors(db_path: str, max_records: int = 1000) -> dict:
         )
         
         # Extract dimension from first embedding
-        dimension = len(results["embeddings"][0]) if results["embeddings"] else 0
+        dimension = len(results["embeddings"][0]) if results["embeddings"] is not None and len(results["embeddings"]) > 0 else 0
         
         # Build vector records
         vectors = []
@@ -80,9 +80,14 @@ def load_chroma_vectors(db_path: str, max_records: int = 1000) -> dict:
         metadatas = results.get("metadatas", [])
         
         for i in range(len(ids)):
+            # Convert embedding to list if it's a numpy array
+            embedding = embeddings[i] if i < len(embeddings) else []
+            if hasattr(embedding, 'tolist'):
+                embedding = embedding.tolist()
+            
             vector_record = {
                 "id": ids[i] if i < len(ids) else f"chunk_{i:04d}",
-                "vector": embeddings[i] if i < len(embeddings) else [],
+                "vector": embedding,
                 "text": documents[i] if i < len(documents) else "",
                 "source": "",
                 "metadata": metadatas[i] if i < len(metadatas) else {}
